@@ -32,7 +32,7 @@ $ docker-compose build
 $ cd simple
 $ docker-compose up
 ```
-This will bring up both services, `issuer` will be listening on 8080 and `cal` on 8081. Leave the terminal open and the running.
+This will bring up both services, `issuer` will be listening on 8080 and `calc` on 8081. Leave the terminal open and the running.
 
 ### Cases
 
