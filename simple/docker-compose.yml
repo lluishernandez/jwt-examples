@@ -1,0 +1,14 @@
+version: "3"
+services:
+    issuer:
+        build: issuer/
+        ports: 
+            - "8080:5000"
+        environment:
+            - "KEY=/key"
+    service:
+        build: service/
+        ports:
+            - "8081:5000"
+        environment:
+            - "KEY=/key.pub"
