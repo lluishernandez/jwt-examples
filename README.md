@@ -1,5 +1,5 @@
 # jwt-examples
-Some simple cases about JWT tokens (PyJWT) + Flask
+Some simple cases about JWT tokens (PyJWT) + Flask. Remember this examples are not designed nor implemented to be used in production, they just try to show different usage cases with JWT.
 
 ## Requirements
 - docker
