@@ -1,0 +1,28 @@
+version: "3"
+services:
+    issuer:
+        build: issuer/
+        ports: 
+            - "8080:5000"
+        environment:
+            - "KEY=/key"
+    proxy:
+        build: proxy/
+        ports: 
+            - "8081:5000"
+        networks:
+            - backend
+            - default
+        environment:
+            - "PUB_KEY=/key.pub"
+            - "SECRET=SomethingThatIsReallySecret"
+    service:
+        build: service/
+        container_name: calc
+        networks:
+            - backend
+        environment:
+            - "SECRET=SomethingThatIsReallySecret"
+networks:
+    backend:
+        internal: true
